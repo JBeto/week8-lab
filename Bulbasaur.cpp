@@ -18,18 +18,16 @@ void Bulbasaur::attack(Pokemon *poke){
     
     if(criticalHit == 0)
     {
-        sp_attack *= 2;
-        poke.damage(sp_attack);
+        poke.damage(sp_attack * 2);
+        cout << "Critical hit!" << endl;
     }
     else if(poke->type == Water)
     {
-        sp_attack *= 2;
-        poke.damage(sp_attack);
+        poke.damage(sp_attack * 2);
     }
     else if(criticalHit == 0 && poke->type == Water)
     {
-        sp_attack *= 4;
-        poke.damage(sp_attack);
+        poke.damage(sp_attack * 4);
     }
     else
     {
