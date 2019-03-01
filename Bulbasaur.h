@@ -5,7 +5,7 @@
 class Bulbasaur: public Pokemon{
   public:
     //insert constructor here
-      // hp = 45, sp. attack = 65
+      // hp = 45, sp. attack = 61
     void attack(Pokemon *poke);
 };
 

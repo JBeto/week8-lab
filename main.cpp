@@ -8,6 +8,7 @@
 #include "Squirtle.h"
 #include "Bulbasaur.h"
 #include "Trainer.h"
+#include "Rival.h"
 
 using namespace std;
 
@@ -28,7 +29,7 @@ int main(){
     int turn = 0;
     char c;
     Trainer * player1 = new Trainer("Red");
-    Trainer * player2 = new Trainer("Joey");
+    Trainer * player2 = new Rival("Joey");
     //populate the team
     for(unsigned i = 0; i < 5; i++){
         player1->addPokemon(Breeder());

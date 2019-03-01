@@ -2,6 +2,7 @@
 #define POKEMON_H
 #include <iostream>
 using namespace std;
+
 enum TYPE{Water, Fire, Grass};
 
 class Pokemon{
