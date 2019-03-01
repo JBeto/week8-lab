@@ -6,6 +6,7 @@ class Charmander: public Pokemon{
   public:
     // insert constructr here
       // hp = 39, sp. attack = 60
+    Charmander();
     void attack(Pokemon *poke);
 };
 
