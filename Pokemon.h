@@ -1,5 +1,5 @@
-#ifndef __POKEMON_H__
-#define __POKEMON_H__
+#ifndef POKEMON_H
+#define POKEMON_H
 #include <iostream>
 using namespace std;
 enum TYPE{Water, Fire, Grass};

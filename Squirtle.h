@@ -1,5 +1,5 @@
-#ifndef __SQUIRTLE_H__
-#define __SQUIRTLE_H__
+#ifndef SQUIRTLE_H
+#define SQUIRTLE_H
 #include "Pokemon.h"
 
 class Squirtle: public Pokemon{

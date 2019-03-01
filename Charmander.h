@@ -1,5 +1,5 @@
-#ifndef __CHARMANDER_H__
-#define __CHARMANDER_H__
+#ifndef CHARMANDER_H
+#define CHARMANDER_H
 #include "Pokemon.h"
 
 class Charmander: public Pokemon{

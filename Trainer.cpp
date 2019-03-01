@@ -1,12 +1,11 @@
 #include "Trainer.h"
 
 bool Trainer::outOfPokemon(){ 
-    return size == 0;
+    return list.size() == 0;
 }
     
 void  Trainer::addPokemon(Pokemon * p){
     list.push_back(p);
-    size++;
 }
 
 string  Trainer::getName(){
@@ -25,14 +24,13 @@ void  Trainer::viewTeam(){
     
 void  Trainer::losePokemon(int index){
     list.erase(list.begin() + index);
-    size--;
 }
     
 void  Trainer::attackPlayer(Trainer * opponent, int index, int enemyIndex){
     //attack the pokemon
     list.at(index)->attack(opponent->list.at(enemyIndex));
-    if(opponent->list.at(enemyIndex)->getHealth() < 0){
-        cout << "You killed that pokemon " << endl;
+    if(opponent->list.at(enemyIndex)->getHealth() <= 0){
+        cout << "You killed that pokemon!" << endl;
         opponent->losePokemon(enemyIndex);
     }
     else{
