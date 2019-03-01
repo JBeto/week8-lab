@@ -1,4 +1,10 @@
 #include "Bulbasaur.h"
+#include <cstdlib>
+
+using namespace std;
+
+Bulbasaur::Bulbasaur()
+: Pokemon(Grass, "Bulbasaur", 45, 61);
 
 void Bulbasaur::attack(Pokemon *poke){
    /*
@@ -7,4 +13,22 @@ void Bulbasaur::attack(Pokemon *poke){
     critical hit ratio is 1/4
     if there is a critical, output it
    */
+    
+    int criticalHit = rand() % 4;
+    
+    if(criticalHit == 0)
+    {
+        sp_attack *= 2;
+        poke.damage(sp_attack);
+    }
+    else if(poke->type == Water)
+    {
+        sp_attack *= 2;
+        poke.damage(sp_attack);
+    }
+    else
+    {
+        poke.damage(sp_attack);
+    }
 }
+
