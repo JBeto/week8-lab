@@ -26,6 +26,11 @@ void Bulbasaur::attack(Pokemon *poke){
         sp_attack *= 2;
         poke.damage(sp_attack);
     }
+    else if(criticalHit == 0 && poke->type == Water)
+    {
+        sp_attack *= 4;
+        poke.damage(sp_attack);
+    }
     else
     {
         poke.damage(sp_attack);
