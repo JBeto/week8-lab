@@ -31,7 +31,7 @@ void Bulbasaur::attack(Pokemon *poke){
     }
     else
     {
-        poke->damage(sp_attack);
+        poke->damage((2/5) * sp_attack);
     }
 }
 
