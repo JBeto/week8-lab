@@ -1,9 +1,7 @@
 #include "Squirtle.h"
 
 void Squirtle::Squirtle(){
-   hp = 44;
-   sp_attack = 50;
-   type = Water;
+   Pokemon(Water, "Squirtle", 44, 50);
 }
 
 void Squirtle:: attack(Pokemon *poke){
@@ -25,7 +23,7 @@ void Squirtle:: attack(Pokemon *poke){
      cout << "Critical Hit!!" << endl;
   }
 
-  poke->hp -= damage;
+  poke->damage(damage);
 }
 
 
