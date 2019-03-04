@@ -8,7 +8,6 @@
 #include "Squirtle.h"
 #include "Bulbasaur.h"
 #include "Trainer.h"
-#include "Rival.h"
 
 using namespace std;
 
@@ -17,7 +16,10 @@ Returns a pokemon pointer that is pointing to either a
 Bulbasaur, Squirtle or Charmander object.
 */
 Pokemon * Breeder(){
-  //FIXME
+  int r = rand() % 3;
+  if (r == 0) return new Squirtle();
+  else if (r == 1) return new Charmander();
+  else return new Bulbasaur();
 }
 
 void clearScreen(){
@@ -29,7 +31,7 @@ int main(){
     int turn = 0;
     char c;
     Trainer * player1 = new Trainer("Red");
-    Trainer * player2 = new Rival("Joey");
+    Trainer * player2 = new Trainer("Joey");
     //populate the team
     for(unsigned i = 0; i < 5; i++){
         player1->addPokemon(Breeder());

@@ -1,10 +1,6 @@
 #include "Charmander.h"
 
-Charmander::Charmander(){
-      health = 39; 
-      sp_attack = 60;
-      type = Fire;
-}
+Charmander::Charmander() : Pokemon(Fire, "Charmander", 39, 60) {}
 
 void Charmander::attack(Pokemon *poke){
    /*
@@ -21,11 +17,14 @@ void Charmander::attack(Pokemon *poke){
      damage *= 2;
   }
   
-  if(type == Grass) {
+  if (type == Grass) {
      damage *= 2;
   }
+  else {
+     damage /= 2;
+  }
 
-  health -= damage;
+  poke->damage(damage);
 }
 
 
