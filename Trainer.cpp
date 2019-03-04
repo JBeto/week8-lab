@@ -20,6 +20,9 @@ string  Trainer::getName(){
 */
 void  Trainer::viewTeam(){
     //FIXME
+    for(unsigned i = 0; i < list.size(); ++i){
+        cout << list.at(i)->getName() << list.at(i)->getHealth() << endl;
+    }
 }
     
 void  Trainer::losePokemon(int index){
